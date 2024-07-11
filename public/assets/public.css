@@ -1,0 +1,288 @@
+
+/* ======= IMPORT FONTS ======= */
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat.ttf');
+}
+
+@font-face {
+    font-family: Archivo;
+    src: url('fonts/Archivo.ttf');
+}
+
+
+/* ======= ROOT VARIABLES ======= */
+
+:root {
+    --dark-primary : #001B3F;
+    --primary : #2B5597;
+    --light-primary : #EBF0FF;
+    --secondary : #F5CE3E;
+    --gray : #474A4D;
+    --black : #0E0F0F;
+    --light: #D1D4D6;
+    --light-gray : #8D9399;
+
+    --footer-space : 132px;
+}
+
+/* ======= GLOBAL PROPERTIES ======= */
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======= GENERAL TAG SELECTORS ======= */
+
+body {
+    direction: ltr;
+    font-family: Montserrat;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ======= GENERAL CLASSSESS ======= */
+
+.btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    height: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.btn, .btn svg path {
+    transition: all 0.33s;
+} 
+
+.main-btn {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.main-btn svg path {
+    fill: #fff;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary);
+    color: var(--black);
+}
+
+.main-btn:hover svg path {
+    fill: var(--black);
+}
+
+.light-btn {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.light-btn svg path {
+    fill: var(--primary);
+}
+
+.light-btn:hover {
+    background-color: var(--light-primary);
+    color: var(--dark-primary);
+}
+
+.light-btn:hover svg path {
+    fill: var(--dark-primary);
+}
+
+/* ======= PUBLIC HEADER ======= */
+
+.public-header {
+    background-color: var(--dark-primary);
+    min-height: 745px;
+    padding: 15px;
+}
+
+.public-header > .top-bar {
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.public-header > .top-bar > .logo-container > .main-logo {
+    width: 200px;
+    height: auto;
+}
+
+.public-header > .top-bar > .nav-container > .main-nav {
+    display: flex;
+    gap: 0 42px;
+}
+
+.public-header > .header-carousel {
+    padding-left: 60px;
+}
+
+.public-header > .header-carousel .carousel-item .carousel-link {
+    display: block;
+    margin: 30px;
+}
+
+.public-header > .header-carousel .carousel-item .carousel-link .carousel-img {
+    transition: 0.4s;
+    max-width: 270px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.public-header > .header-carousel .carousel-item .carousel-link:hover .carousel-img {
+    transform: scale(1.125);
+}
+
+.public-header > .hero {
+    display: flex;
+    justify-content: center;
+}
+
+.public-header > .hero > .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.public-header > .hero > .hero-content > .hero-text {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    color: #fff;
+}
+
+/* ======= PUBLIC FOOTER : GENERAL ======= */
+
+.public-footer {
+    background-color: var(--primary);
+    padding-top: 112px;
+}
+
+/* ======= PUBLIC FOOTER : SLOGAN AREA ======= */
+
+
+.public-footer > .slogan-area {
+    text-align: center;
+}
+
+.public-footer > .slogan-area > .slogan-intro {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 42px;
+    color: #fff;
+}
+
+.public-footer > .slogan-area > .slogan-main {
+    color: #fff;
+    font-family: Archivo;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.public-footer > .slogan-area > .slogan-outline {
+    font-family: Archivo;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--primary);
+    -webkit-text-stroke: 1px #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ======= PUBLIC FOOTER : LINKS AREA ======= */
+
+.public-footer > .links-area {
+    padding: 32px var(--footer-space);
+    display: flex;
+}
+
+.public-footer > .links-area > .prime-col {
+    width: 40%;
+}
+
+.public-footer > .links-area > .prime-col > .footer-logo {
+    width: 126px;
+    height: auto;
+}
+
+.public-footer > .links-area > .prime-col > .socials {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.public-footer > .links-area > .prime-col > .socials > .social-link {
+    transition: all 0.33s;
+}
+
+.public-footer > .links-area > .prime-col > .socials > .social-link:hover {
+    transform: scale(1.25);
+}
+
+.public-footer > .links-area > .links-col {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #fff;
+}
+
+.public-footer > .links-area > .links-col > .links-col-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    text-transform: capitalize;
+}
+
+.public-footer > .links-area > .links-col > .links-col-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    transition: all 0.33s;
+    color: #fff;
+}
+
+.public-footer > .links-area > .links-col > .links-col-link:hover {
+    color: var(--dark-primary);
+}
+
+/* ======= PUBLIC FOOTER : RIGHTS AREA ======= */
+
+.public-footer > .rights-area {
+    margin: 0 var(--footer-space);
+    border-top: 1px solid #fff;
+    padding: 48px;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}

@@ -19,3 +19,9 @@ function makeUser($email, $password) {
 
     return $user;
 }
+
+
+function shorten($text, $length=100, $strip=true){
+    $text = $strip ? strip_tags($text) : $text;
+    return mb_strlen($text) > $length ? (mb_substr($text, 0, $length, 'utf8').'...') : $text;
+}

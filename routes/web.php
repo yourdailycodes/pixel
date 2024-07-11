@@ -2,13 +2,15 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
 
 // PUBLIC AREA
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingController::class, 'home'])->name('home');
+Route::get('about', [LandingController::class, 'about'])->name('about');
+Route::get('works', [LandingController::class, 'works'])->name('works');
+Route::get('contact-us', [LandingController::class, 'contact'])->name('contact');
 
 
 // DASHBOARD ROUTES
